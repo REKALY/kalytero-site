@@ -30,7 +30,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-<link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high" />
 <link rel="stylesheet" href="assets/css/style.css" />
 
 <script type="application/ld+json">
@@ -76,41 +75,60 @@
 <main id="top">
 
   <!-- ========================================================== HERO -->
-  <section class="hero">
-    <div class="hero__media">
-      <picture>
-        <source srcset="assets/hero.webp" type="image/webp" />
-        <img src="assets/hero.jpg" alt="Fachada de piedra cálida con carpintería de madera oscura y sombra de palmera" width="1344" height="768" fetchpriority="high" decoding="async" />
-      </picture>
-    </div>
-
+  <section class="hero" aria-labelledby="hero-title">
     <div class="hero__inner">
-      <p class="eyebrow reveal">
-        <span class="num">Kalytero</span>
-        <span>Grupo de hospitalidad · Restaurante · Café · Hotel · Minimarket</span>
-      </p>
-
-      <h1 class="display reveal" data-delay="1">
-        Cuatro negocios,<br />un mismo <em>servicio</em>.
-      </h1>
-
-      <div class="hero__foot">
-        <p class="lead reveal" data-delay="2">
-          Un restaurante, un café, un hotel y un minimarket que comparten algo más
-          que un nombre: espacios serenos, materia honesta y una hospitalidad que
-          se nota en los detalles pequeños.
+      <div class="hero__intro">
+        <p class="eyebrow">
+          <span class="num">Grupo de hospitalidad</span>
+          <span>Cuatro negocios · Un mismo criterio</span>
         </p>
-
-        <div class="reveal" data-delay="3">
-          <ul class="hero__index">
-            <li>01 Restaurante</li>
-            <li>02 Café</li>
-            <li>03 Hotel</li>
-            <li>04 Minimarket</li>
-          </ul>
-          <p class="scroll-cue" style="margin-top:22px">Desliza</p>
-        </div>
+        <p class="hero__note">Producto cuidado, espacios tranquilos y hospitalidad de detalle.</p>
       </div>
+
+      <nav class="hero__services" aria-label="Explora nuestros negocios">
+        <a class="hero-service" href="#restaurante" aria-label="Descubre Restaurante">
+          <span class="hero-service__image">
+            <picture>
+              <source media="(max-width: 720px)" srcset="assets/restaurante-640.webp" type="image/webp" />
+              <source srcset="assets/restaurante.webp" type="image/webp" />
+              <img src="assets/restaurante.jpg" alt="Comedor sereno con arcos de piedra y mesa de roble" width="1024" height="1280" fetchpriority="high" decoding="async" />
+            </picture>
+          </span>
+          <span class="hero-service__caption"><span>01</span><strong>Restaurante</strong><span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="hero-service" href="#cafe" aria-label="Descubre Café">
+          <span class="hero-service__image">
+            <picture>
+              <source media="(max-width: 720px)" srcset="assets/cafe-640.webp" type="image/webp" />
+              <source srcset="assets/cafe.webp" type="image/webp" />
+              <img src="assets/cafe.jpg" alt="Barra de café en piedra con máquina de espresso" width="1024" height="1280" decoding="async" />
+            </picture>
+          </span>
+          <span class="hero-service__caption"><span>02</span><strong>Café</strong><span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="hero-service" href="#hotel" aria-label="Descubre Hotel">
+          <span class="hero-service__image">
+            <picture>
+              <source media="(max-width: 720px)" srcset="assets/hotel-640.webp" type="image/webp" />
+              <source srcset="assets/hotel.webp" type="image/webp" />
+              <img src="assets/hotel.jpg" alt="Habitación luminosa con cama de lino y cabecero de roble" width="1024" height="1280" decoding="async" />
+            </picture>
+          </span>
+          <span class="hero-service__caption"><span>03</span><strong>Hotel</strong><span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="hero-service" href="#minimarket" aria-label="Descubre Minimarket">
+          <span class="hero-service__image">
+            <picture>
+              <source media="(max-width: 720px)" srcset="assets/minimarket-640.webp" type="image/webp" />
+              <source srcset="assets/minimarket.webp" type="image/webp" />
+              <img src="assets/minimarket.jpg" alt="Minimarket con estanterías de madera, fruta y producto local" width="1024" height="1280" decoding="async" />
+            </picture>
+          </span>
+          <span class="hero-service__caption"><span>04</span><strong>Minimarket</strong><span aria-hidden="true">↗</span></span>
+        </a>
+      </nav>
+
+      <h1 class="wordmark hero__wordmark" id="hero-title"><span>Kalytero</span></h1>
     </div>
   </section>
 
@@ -204,7 +222,7 @@
       </div>
 
       <!-- 01 · Restaurante -->
-      <article class="biz">
+      <article class="biz" id="restaurante">
         <div class="biz__media">
           <figure class="figure reveal">
             <picture>
@@ -237,7 +255,7 @@
       </article>
 
       <!-- 02 · Café -->
-      <article class="biz">
+      <article class="biz" id="cafe">
         <div class="biz__media">
           <figure class="figure reveal">
             <picture>
@@ -270,7 +288,7 @@
       </article>
 
       <!-- 03 · Hotel -->
-      <article class="biz">
+      <article class="biz" id="hotel">
         <div class="biz__media">
           <figure class="figure reveal">
             <picture>
@@ -303,7 +321,7 @@
       </article>
 
       <!-- 04 · Minimarket -->
-      <article class="biz">
+      <article class="biz" id="minimarket">
         <div class="biz__media">
           <figure class="figure reveal">
             <picture>
